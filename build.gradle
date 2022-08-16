@@ -72,6 +72,7 @@ repositories {
 dependencies {
     deobfCompile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.28-17"
     deobfCompile "mezz.jei:jei_1.12.2:4.16.1.302"
-    deobfCompile "curse.maven:gregtechce-293327:3478805"
+//    deobfCompile "curse.maven:gregtechce-293327:3478805"
+    compile files('./libs/gregtech-1.12.2-2.3.4-beta.jar')
     runtime "curse.maven:codechicken-lib-1-8-242818:2779848"
 }
