@@ -4,10 +4,8 @@ import gregtech.api.capability.GregtechCapabilities;
 import gregtech.api.capability.GregtechTileCapabilities;
 import gregtech.api.capability.IEnergyContainer;
 import gregtech.integration.theoneprobe.provider.CapabilityInfoProvider;
-import mcjty.theoneprobe.api.ElementAlignment;
-import mcjty.theoneprobe.api.IProbeInfo;
-import mcjty.theoneprobe.api.NumberFormat;
-import mcjty.theoneprobe.api.TextStyleClass;
+import mcjty.theoneprobe.api.*;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
@@ -28,12 +26,12 @@ public class EnergyInfoProvider extends CapabilityInfoProvider<IEnergyContainer>
     }
 
     @Override
-    protected void addProbeInfo(IEnergyContainer capability, IProbeInfo probeInfo, TileEntity tileEntity, EnumFacing sideHit) {
+    protected void addProbeInfo(IEnergyContainer capability, IProbeInfo probeInfo, EntityPlayer entityPlayer, TileEntity tileEntity, IProbeHitData iProbeHitData) {
         long energyStored = capability.getEnergyStored();
         long maxStorage = capability.getEnergyCapacity();
         if (maxStorage == 0) return;
         IProbeInfo horizontalPane = probeInfo.horizontal(probeInfo.defaultLayoutStyle().alignment(ElementAlignment.ALIGN_CENTER));
-        String additionalSpacing = tileEntity.hasCapability(GregtechTileCapabilities.CAPABILITY_WORKABLE, sideHit) ? "   " : "";
+        String additionalSpacing = tileEntity.hasCapability(GregtechTileCapabilities.CAPABILITY_WORKABLE, null) ? "   " : "";
         horizontalPane.text(TextStyleClass.INFO + "{*gregtech.top.energy_stored*} " + additionalSpacing);
         if(GregicProbeConfig.displayEnergyThousandths) {
             horizontalPane.progress(energyStored, maxStorage, probeInfo.defaultProgressStyle()

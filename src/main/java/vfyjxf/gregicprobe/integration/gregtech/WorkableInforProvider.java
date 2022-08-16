@@ -3,10 +3,8 @@ package vfyjxf.gregicprobe.integration.gregtech;
 import gregtech.api.capability.GregtechTileCapabilities;
 import gregtech.api.capability.IWorkable;
 import gregtech.integration.theoneprobe.provider.CapabilityInfoProvider;
-import mcjty.theoneprobe.api.ElementAlignment;
-import mcjty.theoneprobe.api.IProbeInfo;
-import mcjty.theoneprobe.api.NumberFormat;
-import mcjty.theoneprobe.api.TextStyleClass;
+import mcjty.theoneprobe.api.*;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
@@ -24,7 +22,7 @@ public class WorkableInforProvider extends CapabilityInfoProvider<IWorkable> {
     }
 
     @Override
-    protected void addProbeInfo(IWorkable capability, IProbeInfo probeInfo, TileEntity tileEntity, EnumFacing sideHit) {
+    protected void addProbeInfo(IWorkable capability, IProbeInfo probeInfo, EntityPlayer entityPlayer, TileEntity tileEntity, IProbeHitData iProbeHitData) {
         int currentProgress = capability.getProgress();
         int maxProgress = capability.getMaxProgress();
         if (currentProgress > 0) {
