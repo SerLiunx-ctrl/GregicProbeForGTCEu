@@ -1,13 +1,13 @@
 [
 {
   "modid": "gregicprobe",
-  "name": "GregicProbe",
-  "description": "More The One Probe Support for GTCE",
+  "name": "GregicProbe GTCEu",
+  "description": "More The One Probe Support for GTCEu",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["vfyjxf"],
+  "authorList": ["vfyjxf", "SerLiunx"],
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
