@@ -15,9 +15,6 @@ public class GregicProbeCompatibility {
         if (GregicProbeConfig.displaySecondProgress) {
             oneProbe.registerProvider(new WorkableInforProvider());
         }
-        if (GregicProbeConfig.displayRecipeEut) {
-            oneProbe.registerProvider(new RecipeInfoProvider());
-        }
         if (GregicProbeConfig.displayItemOutputs) {
             oneProbe.registerProvider(new RecipeItemOutputInfoProvider());
         }

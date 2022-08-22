@@ -11,7 +11,6 @@ import mcjty.theoneprobe.api.TextStyleClass;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import vfyjxf.gregicprobe.config.GregicProbeConfig;

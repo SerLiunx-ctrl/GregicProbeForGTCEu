@@ -13,9 +13,9 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 
-version = "1.1"
+version = "1.1.1"
 group = "com.github.vfyjxf.gregicprobe"
-archivesBaseName = "GregicProbe"
+archivesBaseName = "GregicProbe-GTCEu"
 
 sourceCompatibility = targetCompatibility = '1.8'
 compileJava {
